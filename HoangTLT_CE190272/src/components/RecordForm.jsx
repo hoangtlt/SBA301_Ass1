@@ -11,8 +11,8 @@ const names = { categories: 'category', news: 'article', users: 'user' };
 
 export default function RecordForm({ entity, selected, data, onSave, onClose }) {
   const initial = selected
-    ? { ...selected, tags: selected.tags?.join(', ') ?? '' }
-    : { ...defaults[entity] };
+    ? { ...selected, tags: selected.tags?.join(', ') ?? '' } //edit
+    : { ...defaults[entity] }; //delete
   const [form, setForm] = useState(initial);
   const [errors, setErrors] = useState({});
   const fixedAdmin = entity === 'users' && selected?.id === 'user-admin';

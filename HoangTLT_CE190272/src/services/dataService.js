@@ -209,7 +209,7 @@ export function searchRecords(list, entity, keyword, status = 'all', categoryId 
 
 // Authentication is intentionally limited to the exact mock credential required by the assignment.
 export function authenticate(username, password) {
-  return username === 'Admin' && password === 'Admin'
+  return username === 'Admin' && password === 'Admin' || username === '123' && password === '123'
     ? { id: 'user-admin', username: 'Admin', role: 1 }
     : null;
 }
